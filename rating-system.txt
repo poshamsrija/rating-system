@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display:flex;
+  
+}
+.cont1{
+    justify-content: space-between; /* horizontal alignment */
+  align-items: center;           /* vertical alignment */
+  height: 200px;
+  background: lightblue;
+  flex-wrap : wrap;
+  align-content : space-between;
+}
+.cont2{
+    justify-content: space-between; /* horizontal alignment */
+  align-items: center;           /* vertical alignment */
+  height: 200px;
+  background: lightblue;
+  flex-wrap : wrap;
+  align-content : space-between;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  background: tomato;
+}
+/* #item1{
+    /* align-self : flex-end;*/
+    /* flex-wrap : wrap;
+    align-content:space-between; */
+/* } */ */
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="cont1">
+    <div class="item"></div>
+    <div class="item" id="item1"></div>
+    <div class="item"></div>
+    </div>
+    <div class="cont2">
+    <div class="item"></div>
+    <div class="item" id="item1"></div>
+    <div class="item"></div>
+    </div>
+  </div>
+
+</body>
+</html>
