@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>star rating</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            margin:20px;
+            text-align:center;
+        }
+        img {
+            width:400px;
+            border-radius:10px;
+        }
+        .star {
+            font-size:40px;
+            color:gray;
+            cursor:pointer;
+        }
+        .star.filled {
+            color:gold;
+        }
+        #rating {
+            margin-top:10px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie reviews</h1>
+    <img src="https://tse4.mm.bing.net/th/id/OIP.RJc2YfliaxRiFWtYr0WC9AHaJQ?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="mov" width="150" height="300">
+    <p>Lokah is a 2025 Indian Malayalam-language superhero adventurous fantasy film<br>directed by dominic Arun and produced by Dulquer Salmaan.<br>It stars Kalyani Priyadarshan and Nalsen</p>
+    <h2>Rate this movie</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <div id="rating">0/5</div>
+    <script>
+        $(document).ready(function(){
+            $(".star").click(function(){
+                let val=$(this).data("value");
+                $(".star").each(function(){
+                    
+                })
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $(".star").click(function(){
+                let val = $(this).data("value");
+                $(".star").each(function(){
+                    $(this).toggleClass("filled",$(this).data("value")<=val);
+                });
+                $("#rating").text(val+"/5");
+            });
+        });
+       
+    </script>
+    
+</body>
+</html>
